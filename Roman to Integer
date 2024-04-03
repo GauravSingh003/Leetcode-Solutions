@@ -1,0 +1,31 @@
+// Roman numerals are represented by seven different symbols: I, V, X, L=50, C=100, D=500 and M=1000.
+
+function cheak(a) {
+  const newMap = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000
+  }
+  let result = 0;
+
+  for (let i = 0; i < a.length; i++) {
+    const curr = newMap[a[i]];
+    const next = newMap[a[i + 1]];
+    if (curr < next) {
+      result += next - curr;
+      i++;
+    } else if(curr > next ){
+      result += curr;
+    }
+    else {
+        result += curr;
+    }
+  }
+  return result;
+}
+console.log(cheak("MCMXCIV"));
+
