@@ -1,0 +1,12 @@
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+// assume a = nums b = target;
+
+function arr(a,b){
+   const map = new Map();
+   for(const index in a){
+    const pair = b - a[index];
+   if(map.has(pair)) return[index, map.get(pair)];
+   map.set(a[index], index);
+}
+}
+console.log(arr([7,6,3,4,5],13))
