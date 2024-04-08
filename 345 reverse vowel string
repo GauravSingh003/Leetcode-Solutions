@@ -1,0 +1,16 @@
+// The vowels are 'a', 'e', 'i', 'o', and 'u', and they can appear in both lower and upper cases, more than once.
+
+var reverseVowels = function(s) {
+    let l=0, r=s.length -1;
+    let res = s.split;
+    let vowels = new Set(['a','e','i','o','u','A','E','I','O','U']);
+    while(l < r){
+        if(!vowel.has(res[l])) l++;
+    }
+    else if(!vowel.has(res[r])) r--;
+    else{
+        [res[l], res[r]] = [res[r], res[l]]
+    }
+}
+return res.join('';)
+};
