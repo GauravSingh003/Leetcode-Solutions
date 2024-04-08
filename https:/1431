@@ -1,0 +1,16 @@
+// There are n kids with candies. You are given an integer array candies, where each candies[i] represents the number of candies the ith kid has,
+// and an integer extraCandies, denoting the number of extra candies that you have.
+
+var kidsWithCandies = function(candies, extraCandies) {
+    var opt = [];
+    var max = Math.max(...candies);
+    for(var i = 0; i<candies.length; i++){
+        if(candies[i] + extraCandies >= max){
+            opt.push(true);
+        }
+        else{
+            opt.push(false);
+        }
+    }
+    return opt;
+};
